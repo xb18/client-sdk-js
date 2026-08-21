@@ -1,5 +1,21 @@
 # Change Log
 
+## 2.22.1
+
+### Patch Changes
+
+- Forward `DisconnectReason` to the `ParticipantDisconnected` event - [#2055](https://github.com/livekit/client-sdk-js/pull/2055) ([@seonghunYang](https://github.com/seonghunYang))
+
+- fix: enqueue signal requests until queue has been drained - [#2061](https://github.com/livekit/client-sdk-js/pull/2061) ([@lukasIO](https://github.com/lukasIO))
+
+- Add roomOptions.dataStream.maxPayloadByteLength to control max data stream size - [#2060](https://github.com/livekit/client-sdk-js/pull/2060) ([@1egoman](https://github.com/1egoman))
+
+- chore: signalling state machine - [#2046](https://github.com/livekit/client-sdk-js/pull/2046) ([@lukasIO](https://github.com/lukasIO))
+
+- Fix `supportsAdaptiveStream` always returning `true` by comparing `typeof` against the `'undefined'` string. It now returns `false` in environments without `ResizeObserver` or `IntersectionObserver`. - [#2059](https://github.com/livekit/client-sdk-js/pull/2059) ([@mrpmohiburrahman](https://github.com/mrpmohiburrahman))
+
+- Treat TokenSource JWTs without `exp` as expired, and still honor `exp` when `nbf` is absent - [#2057](https://github.com/livekit/client-sdk-js/pull/2057) ([@SashaMIT](https://github.com/SashaMIT))
+
 ## 2.22.0
 
 ### Minor Changes
